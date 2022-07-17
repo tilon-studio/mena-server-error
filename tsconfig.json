@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["esnext", "DOM"],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "jsx":"preserve",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "types": ["node", "jest"],
+  "include": ["src", "./jest.config.ts"],
+  "exclude": ["node_modules", "dist"]
+}
