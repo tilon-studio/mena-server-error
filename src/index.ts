@@ -34,3 +34,15 @@ export function errorJson(error: Error | ServerError): ErrorJson {
     code: error["code"] ?? DEFAULT_ERROR_CODE,
   };
 }
+
+export function errorResponse(error: Error | ServerError): Response {
+  const data = errorJson(error);
+  const body = JSON.stringify(data);
+
+  return new Response(body, {
+    status: data.status,
+    headers: new Headers({
+      "Content-Type": "application/json",
+    }),
+  });
+}
