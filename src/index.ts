@@ -20,10 +20,6 @@ export class ServerError extends Error {
     this.status = status;
     this.code = code;
   }
-
-  toJson(): ErrorJson {
-    return errorJson(this);
-  }
 }
 
 export function errorJson(error: Error & ServerError): ErrorJson {
