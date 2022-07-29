@@ -26,16 +26,16 @@ export class ServerError extends Error {
   }
 }
 
-export function errorJson(error: Error | ServerError): ErrorJson {
+export function errorJson(error: Error & ServerError): ErrorJson {
   return {
     error: error.name ?? DEFAULT_ERROR_NAME,
     message: error.message ?? DEFAULT_ERROR_MESSAGE,
-    status: error["status"] ?? DEFAULT_ERROR_STATUS,
-    code: error["code"] ?? DEFAULT_ERROR_CODE,
+    status: error.status ?? DEFAULT_ERROR_STATUS,
+    code: error.code ?? DEFAULT_ERROR_CODE,
   };
 }
 
-export function errorResponse(error: Error | ServerError): Response {
+export function errorResponse(error: Error & ServerError): Response {
   const data = errorJson(error);
   const body = JSON.stringify(data);
 
