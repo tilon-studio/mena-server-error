@@ -1,6 +1,6 @@
 {
   "name": "@tilon/mena-server-error",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Server Error Utility",
   "source": "src/index.ts",
   "main": "dist/mena-server-error.js",
@@ -36,10 +36,10 @@
   "homepage": "https://github.com/tilon/mena-server-error#readme",
   "devDependencies": {
     "@types/jest": "^28.1.6",
-    "@types/node": "^18.6.2",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
-    "eslint": "^8.20.0",
+    "@types/node": "^18.6.4",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "eslint": "^8.21.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "microbundle": "^0.15.0",
